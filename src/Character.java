@@ -47,21 +47,21 @@ public class Character {
   }
 
   //Step 1: create a constructor to initialize the Attributes
-    public Character(String name, double  health, int strength){
+    public Character(String name, int strength){
     this.setName(name);
-    this.setHealth(health);
+    this.setHealth(1000.0);
     this.setStrength(strength);
     this.setDefense(" ");
 }
   //Step 1: method that prints character's stats
   public void displayStats(){
-    System.out.println("My name is: " + name);
-    System.out.println("I have " + health + " points of healts");
-    System.out.println("My strength is: " + strength);
-    System.out.println("My defense is: " + defense);
+    System.out.println("Name: " + name);
+    System.out.println("Points of healts: " + health);
+    System.out.println("Strength: " + strength);
+    System.out.println("Defense: " + defense);
     System.out.println("---------------------------");
   }
-  //Step 2: method gives possibility to choose the defense
+  //Step 2: method gives possibility to choose a defense
   public void chooseDefense(){
     Scanner scan = new Scanner(System.in);
     System.out.println(getName() +", choose the armor to defend yourself: \n\t[1]helmet \n\t[2]breastplate \n\t[3]forearm protector \n\t[0]nothing");
@@ -70,18 +70,22 @@ public class Character {
       case 1:
         defense = "helmet";
         System.out.println(name + " can defend yourself with the " + defense + " now");
+        System.out.println("---------------------------");
         break;
       case 2:
         defense = "breastplate";
         System.out.println(name + " can defend yourself with the " + defense + " now");
+        System.out.println("---------------------------");
         break;
       case 3:
         defense = "forearm protector";
         System.out.println(name + " can defend yourself with the " + defense + " now");
+        System.out.println("---------------------------");
         break;
       default:
         defense = " ";
         System.out.println(name + " do not have any defense");
+        System.out.println("---------------------------");
     }
   }
 
