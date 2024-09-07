@@ -9,9 +9,9 @@ public class Character {
 
   //Step 2: new attributes
   private String defense;
-  int damage;
-  int level;
-  double experience;
+  private int damage;
+  private int level;
+  private int experience;
 
   //generate Getters and Setters to modify and view the attribute values
   public String getName() {
@@ -45,13 +45,38 @@ public class Character {
   public void setDefense(String defense) {
     this.defense = defense;
   }
+  public int getDamage() {
+    return damage;
+  }
+
+  public void setDamage(int damage) {
+    this.damage = damage;
+  }
+
+  public int getLevel() {
+    return level;
+  }
+
+  public void setLevel(int level) {
+    this.level = level;
+  }
+
+  public int getExperience() {
+    return experience;
+  }
+
+  public void setExperience(int experience) {
+    this.experience = experience;//the remaining health after a battle is converted into experience
+  }
 
   //Step 1: create a constructor to initialize the Attributes
     public Character(String name, int strength){
     this.setName(name);
-    this.setHealth(1000.0);
+    this.setHealth(300.0);
     this.setStrength(strength);
     this.setDefense(" ");
+    this.setLevel(0);
+    this.setExperience(0);
 }
   //Step 1: method that prints character's stats
   public void displayStats(){
@@ -59,6 +84,8 @@ public class Character {
     System.out.println("Points of healts: " + health);
     System.out.println("Strength: " + strength);
     System.out.println("Defense: " + defense);
+    System.out.println("Level: " + level);
+    System.out.println("Experience: " + experience);
     System.out.println("---------------------------");
   }
   //Step 2: method gives possibility to choose a defense

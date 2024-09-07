@@ -11,13 +11,17 @@ public class Main {
     Monster monster1 = new Monster("Dragon", 40, 2);
 
     //Step 1: call displayStats() method to show the output
-    knight.displayStats();
-    king.displayStats();
+    //knight.displayStats();
+    //king.displayStats();
     //Step 3: call displayStats() method to show the output
-    hero1.displayStats();
-    monster1.displayStats();
+    //hero1.displayStats();
+    //monster1.displayStats();
 
-    //Step 1: let the character choose a defense
+    //Step 6: call the Battle method to see who wins
+    Battle battle = new Battle();
+    battle.battle(hero1, monster1);
+
+    /*//Step 1: let the character choose a defense
     knight.chooseDefense();
     king.chooseDefense();
     hero1.chooseDefense();
@@ -78,7 +82,7 @@ public class Main {
     knight.displayStats();
     king.displayStats();
     hero1.displayStats();
-    monster1.displayStats();
+    monster1.displayStats();*/
 
   }
 }
