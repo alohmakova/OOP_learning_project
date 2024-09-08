@@ -48,7 +48,7 @@ public class Monster extends Character{
     return getDamage();
   }
   public double takeDamage(int damage){
-    if (rage>=90 && rage>=150) {
+    if (rage>=250 && rage<=350) {
       System.out.println(getName() + " enters a berserk rage!");
       setHealth(getHealth()-damage/2.0);//If a monster enters a berserk rage, it takes less damage
       ferocity +=1;                     //and its ferocity is greater, which increases the amount of damage it deals
